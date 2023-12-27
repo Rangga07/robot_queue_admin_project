@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on win32)" generated="20231121 10:40:45.804" rpa="false" schemaversion="4">
+<suite id="s1" name="TestClusters" source="c:\Users\RANGGA\Documents\Robot_Project\Project Single Queue\SingelQueue_Dev\Tests\Clusters\TestClusters.robot">
+<kw name="Before" library="Clusters" type="SETUP">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231121 10:40:50.031" level="INFO">Opening browser 'chrome' to base url 'http://192.168.108.23:8099/'.</msg>
+<status status="PASS" starttime="20231121 10:40:50.030" endtime="20231121 10:40:54.479"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231121 10:40:54.481" endtime="20231121 10:40:54.696"/>
+</kw>
+<kw name="Login Single Queue Success" library="Login">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231121 10:40:54.697" endtime="20231121 10:40:55.010"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath=//input</arg>
+<arg>yopi@caredokter.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231121 10:40:55.011" level="INFO">Typing text 'yopi@caredokter.com' into text field 'xpath=//input'.</msg>
+<status status="PASS" starttime="20231121 10:40:55.010" endtime="20231121 10:40:55.149"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>xpath=(//input)[2]</arg>
+<arg>Qwerty123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231121 10:40:55.151" level="INFO">Typing text 'Qwerty123' into text field 'xpath=(//input)[2]'.</msg>
+<status status="PASS" starttime="20231121 10:40:55.150" endtime="20231121 10:40:55.254"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>xpath=//span[@class="content"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231121 10:40:55.257" level="INFO">Clicking element 'xpath=//span[@class="content"]'.</msg>
+<status status="PASS" starttime="20231121 10:40:55.255" endtime="20231121 10:40:55.336"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231121 10:40:57.351" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231121 10:40:55.338" endtime="20231121 10:40:57.358"/>
+</kw>
+<status status="PASS" starttime="20231121 10:40:54.696" endtime="20231121 10:40:57.360"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>xpath=//div[@class="v-text-overflow"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231121 10:40:57.360" endtime="20231121 10:40:57.588"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${menu_cluster}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231121 10:40:57.592" level="INFO">Clicking element 'xpath=//a[@href="/admin/content/clusters"]'.</msg>
+<status status="PASS" starttime="20231121 10:40:57.590" endtime="20231121 10:40:57.683"/>
+</kw>
+<status status="PASS" starttime="20231121 10:40:50.029" endtime="20231121 10:40:57.685"/>
+</kw>
+<test id="s1-t1" name="hapus_data_cluster" line="22">
+<kw name="Hapus Data Cluster" library="Clusters">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>//div[@class="v-text-overflow"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231121 10:40:57.687" endtime="20231121 10:40:57.823"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${menu_cluster}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231121 10:40:57.828" level="INFO">Clicking element 'xpath=//a[@href="/admin/content/clusters"]'.</msg>
+<status status="PASS" starttime="20231121 10:40:57.826" endtime="20231121 10:40:58.012"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231121 10:41:00.026" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231121 10:40:58.013" endtime="20231121 10:41:00.027"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${pilih_data_hapus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231121 10:41:00.029" level="INFO">Clicking element 'xpath=//*[@id="main-content"]/main/div[1]/div/table/tbody/tr[1]/td[2]'.</msg>
+<status status="PASS" starttime="20231121 10:41:00.029" endtime="20231121 10:41:00.137"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231121 10:41:02.146" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231121 10:41:00.137" endtime="20231121 10:41:02.148"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${btn_delete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231121 10:41:02.150" level="INFO">Clicking element 'xpath=//*[@id="main-content"]/header/div[5]/div[2]/div[2]/div/button/span/span/i'.</msg>
+<status status="PASS" starttime="20231121 10:41:02.148" endtime="20231121 10:41:02.218"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${btn_delete_confirm}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20231121 10:41:02.512" level="INFO">Clicking element 'xpath=//*[@id="dialog-outlet"]/span/div[2]/div[2]/div[2]/button'.</msg>
+<status status="PASS" starttime="20231121 10:41:02.219" endtime="20231121 10:41:02.596"/>
+</kw>
+<status status="PASS" starttime="20231121 10:40:57.686" endtime="20231121 10:41:02.596"/>
+</kw>
+<doc>Test untuk delete cluster</doc>
+<tag>delete</tag>
+<tag>dev</tag>
+<status status="PASS" starttime="20231121 10:40:57.685" endtime="20231121 10:41:02.598"/>
+</test>
+<kw name="After" library="Clusters" type="TEARDOWN">
+<kw name="Close Browser" library="RPA.Browser.Selenium">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231121 10:41:02.613" endtime="20231121 10:41:04.961"/>
+</kw>
+<status status="PASS" starttime="20231121 10:41:02.609" endtime="20231121 10:41:04.963"/>
+</kw>
+<doc>Automation test untuk Modul Cluster</doc>
+<status status="PASS" starttime="20231121 10:40:45.840" endtime="20231121 10:41:04.964"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">delete</stat>
+<stat pass="1" fail="0" skip="0">dev</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestClusters">TestClusters</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

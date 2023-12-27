@@ -1,0 +1,2 @@
+BASE_URL="http://192.168.108.23:8099/"
+BROWSER="chrome"
