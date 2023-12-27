@@ -10,7 +10,7 @@ Before
 
 Login Single Queue Success
     Wait Until Element Is Visible    //input
-    Input Text    xpath=//input    yopi@caredokter.com
-    Input Text    xpath=(//input)[2]    Qwerty123
+    Input Text    xpath=//input    -
+    Input Text    xpath=(//input)[2]    -
     Click Element    xpath=//span[@class="content"]
     Sleep    2
